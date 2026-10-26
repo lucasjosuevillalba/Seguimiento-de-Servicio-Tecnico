@@ -1,0 +1,1180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Seguimiento de servicio técnico</title>
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<style>
+  :root {
+    --bg: #F1F3F1; --surface: #FFFFFF; --surface-2: #E9EDEA;
+    --ink: #1B2420; --ink-soft: #56635C; --line: #D8DED9;
+    --accent: #2F6F5E; --accent-ink: #FFFFFF;
+    --amber: #B4741F; --blue: #2E5E86; --plum: #74578F; --grey: #6B7573; --rust: #AE3F28;
+    --radius: 3px; color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #101615; --surface: #19211F; --surface-2: #212B28;
+      --ink: #E7EDEA; --ink-soft: #94A49D; --line: #2B3634;
+      --accent: #4FA98A; --amber: #D99A4E; --blue: #6FA0C9;
+      --plum: #A98BC4; --grey: #8B9694; --rust: #D9694D; color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #101615; --surface: #19211F; --surface-2: #212B28;
+    --ink: #E7EDEA; --ink-soft: #94A49D; --line: #2B3634;
+    --accent: #4FA98A; --amber: #D99A4E; --blue: #6FA0C9;
+    --plum: #A98BC4; --grey: #8B9694; --rust: #D9694D; color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--ink); font-family: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; -webkit-font-smoothing: antialiased; min-height: 100vh; }
+  .mono { font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace; }
+  button { font-family: inherit; cursor: pointer; }
+  input, select, textarea { font-family: inherit; font-size: 14px; }
+  a { color: inherit; }
+  .hidden { display: none !important; }
+
+  /* Login */
+  .login-wrap { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 20px; }
+  .login-card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 28px 26px; width: 340px; max-width: 100%; }
+  .login-card h1 { font-size: 18px; margin: 0 0 4px; }
+  .login-card p { font-size: 13px; color: var(--ink-soft); margin: 0 0 20px; }
+  .login-card label { display: block; font-size: 12.5px; color: var(--ink-soft); margin-bottom: 5px; }
+  .login-card input { width: 100%; background: var(--bg); border: 1px solid var(--line); color: var(--ink); border-radius: var(--radius); padding: 9px 10px; margin-bottom: 14px; }
+  .login-error { color: var(--rust); font-size: 12.5px; margin-bottom: 12px; display: none; }
+  .login-error.show { display: block; }
+
+  .app { max-width: 1180px; margin: 0 auto; padding: 28px 20px 80px; }
+
+  .topbar { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-bottom: 6px; }
+  .topbar h1 { font-size: 22px; font-weight: 700; margin: 0 0 4px; letter-spacing: -0.01em; }
+  .topbar p { margin: 0; color: var(--ink-soft); font-size: 14px; }
+  .header-actions { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+  .theme-toggle, .btn-export, .btn-plain {
+    border: 1px solid var(--line); background: var(--surface); color: var(--ink-soft);
+    border-radius: var(--radius); padding: 8px 12px; font-size: 13px;
+  }
+  .user-chip { font-size: 12.5px; color: var(--ink-soft); display: flex; align-items: center; gap: 8px; }
+  .user-chip b { color: var(--ink); font-weight: 600; }
+  .user-chip .role-tag { border: 1px solid var(--line); border-radius: 20px; padding: 1px 8px; font-size: 11px; }
+  .btn-primary { background: var(--accent); color: var(--accent-ink); border: none; border-radius: var(--radius); padding: 10px 16px; font-size: 14px; font-weight: 600; white-space: nowrap; }
+  .btn-primary:hover { filter: brightness(1.06); }
+  .btn-primary:disabled, .btn-export:disabled { opacity: 0.5; cursor: not-allowed; }
+
+  .connection-note { font-size: 12.5px; color: var(--ink-soft); margin: 10px 0 20px; padding: 8px 12px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); display: none; }
+  .connection-note.show { display: block; }
+  .connection-note.error { color: var(--rust); border-color: var(--rust); }
+
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 22px; }
+  .stat { background: var(--surface); border: 1px solid var(--line); border-left: 3px solid var(--ink-soft); border-radius: var(--radius); padding: 12px 14px; }
+  .stat b { display: block; font-size: 24px; font-family: "IBM Plex Mono", monospace; font-weight: 600; }
+  .stat span { font-size: 12.5px; color: var(--ink-soft); }
+  .stat.pendiente { border-left-color: var(--amber); }
+  .stat.proceso { border-left-color: var(--blue); }
+  .stat.urgente { border-left-color: var(--rust); }
+  .stat.abiertos { border-left-color: var(--accent); }
+
+  .filters { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin-bottom: 16px; }
+  .filters select, .filters input[type="search"] { background: var(--surface); border: 1px solid var(--line); color: var(--ink); border-radius: var(--radius); padding: 8px 10px; font-size: 13.5px; }
+  .filters input[type="search"] { flex: 1; min-width: 180px; }
+  .filters .count { margin-left: auto; font-size: 13px; color: var(--ink-soft); }
+
+  .board { display: flex; flex-wrap: nowrap; justify-content: center; gap: 16px; align-items: start; overflow-x: auto; padding-bottom: 6px; }
+  .board-solo { display: flex; justify-content: center; gap: 16px; align-items: start; }
+  .board-col { background: var(--surface-2); border: 1px solid var(--line); border-radius: var(--radius); padding: 14px; width: 320px; flex: 0 0 320px; }
+  .board-col-head { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 4px; gap: 8px; }
+  .board-col-head h2 { font-size: 14.5px; margin: 0; font-weight: 700; }
+  .board-col-head .col-count { font-size: 12px; color: var(--ink-soft); font-family: "IBM Plex Mono", monospace; }
+  .board-add { font-size: 12.5px; color: var(--ink-soft); background: none; border: none; padding: 4px 0 12px; display: flex; align-items: center; gap: 6px; }
+  .board-add:hover { color: var(--ink); }
+  .board-cards { display: flex; flex-direction: column; gap: 8px; }
+  .board-card {
+    background: var(--surface); border: 1px solid var(--line); border-left: 4px solid var(--grey);
+    border-radius: var(--radius); padding: 10px 12px; text-align: left; width: 100%;
+  }
+  .board-card[data-estado="pendiente"] { border-left-color: var(--amber); }
+  .board-card[data-estado="proceso"] { border-left-color: var(--blue); }
+  .board-card[data-estado="espera"] { border-left-color: var(--plum); }
+  .board-card[data-estado="listo"] { border-left-color: var(--accent); }
+  .board-card[data-estado="cerrado"] { border-left-color: var(--grey); opacity: 0.7; }
+  .board-card-top { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 8px; align-items: flex-start; }
+  .board-card-cliente { font-weight: 600; font-size: 13.5px; min-width: 0; word-break: break-word; flex: 1 1 auto; }
+  .board-card-cliente.done { text-decoration: line-through; color: var(--ink-soft); }
+  .board-card-tags { display: flex; gap: 4px; flex-wrap: wrap; justify-content: flex-end; flex-shrink: 0; }
+  .tag-urgente { background: var(--rust); color: #fff; font-size: 10px; font-weight: 600; padding: 2px 7px; border-radius: 2px; white-space: nowrap; }
+  .tag-pago { border: 1px solid var(--amber); color: var(--amber); font-size: 10px; font-weight: 600; padding: 1px 6px; border-radius: 2px; white-space: nowrap; }
+  .tag-abonado { border: 1px solid var(--accent); color: var(--accent); font-size: 10px; font-weight: 600; padding: 1px 6px; border-radius: 2px; white-space: nowrap; }
+  .tag-programado { border: 1px solid var(--blue); color: var(--blue); font-size: 10px; font-weight: 600; padding: 1px 6px; border-radius: 2px; white-space: nowrap; }
+  .tag-vencido { background: #D62828; color: #fff; font-size: 10px; font-weight: 600; padding: 2px 7px; border-radius: 2px; white-space: nowrap; animation: parpadeo 1s steps(1, end) infinite; }
+  .tag-gestionado { border: 1px solid var(--grey); color: var(--grey); font-size: 10px; font-weight: 600; padding: 1px 6px; border-radius: 2px; white-space: nowrap; }
+  @keyframes parpadeo { 0%, 100% { opacity: 1; } 50% { opacity: 0.15; } }
+  .board-card-producto { font-size: 12.5px; color: var(--ink-soft); margin-top: 4px; }
+  .board-card-proveedor { font-size: 12px; color: var(--ink); margin-top: 3px; }
+  .board-card-proveedor span { color: var(--ink-soft); }
+  .board-card-foot { display: flex; flex-direction: column; gap: 5px; margin-top: 9px; padding-top: 8px; border-top: 1px dashed var(--line); font-size: 11px; color: var(--ink-soft); }
+  .board-card-foot-row { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+  .board-card-id { font-family: "IBM Plex Mono", monospace; }
+  .board-card-badge { border: 1px solid var(--line); border-radius: 20px; padding: 1px 8px; white-space: nowrap; align-self: flex-start; }
+  .board-empty-col { font-size: 12.5px; color: var(--ink-soft); padding: 14px 4px; text-align: center; border: 1px dashed var(--line); border-radius: var(--radius); }
+
+  .closed-toggle {
+    width: 100%; background: none; border: 1px dashed var(--line); border-radius: var(--radius);
+    padding: 8px 10px; font-size: 12px; color: var(--ink-soft); margin-top: 10px; text-align: left;
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .closed-toggle .arrow { transition: transform 0.15s ease; display: inline-block; }
+  .closed-toggle.open .arrow { transform: rotate(90deg); }
+  .closed-list { display: none; flex-direction: column; gap: 8px; margin-top: 8px; }
+  .closed-list.open { display: flex; }
+
+  .empty { text-align: center; padding: 60px 20px; color: var(--ink-soft); border: 1px dashed var(--line); border-radius: var(--radius); background: var(--surface); }
+  .empty b { display: block; color: var(--ink); font-size: 15px; margin-bottom: 6px; }
+
+  .scrim { position: fixed; inset: 0; background: rgba(10,15,13,0.4); opacity: 0; pointer-events: none; transition: opacity 0.18s ease; z-index: 40; }
+  .scrim.open { opacity: 1; pointer-events: auto; }
+  .drawer { position: fixed; top: 0; right: 0; height: 100%; width: 440px; max-width: 100%; background: var(--surface); border-left: 1px solid var(--line); transform: translateX(100%); transition: transform 0.22s ease; z-index: 41; display: flex; flex-direction: column; }
+  .drawer.open { transform: translateX(0); }
+  .drawer-head { padding: 18px 20px; border-bottom: 1px solid var(--line); display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+  .drawer-head h2 { font-size: 16px; margin: 0; }
+  .drawer-close { background: none; border: 1px solid var(--line); border-radius: var(--radius); width: 30px; height: 30px; color: var(--ink-soft); font-size: 16px; line-height: 1; }
+  .drawer-body { padding: 18px 20px; overflow-y: auto; flex: 1; }
+  .field { margin-bottom: 14px; }
+  .field label { display: block; font-size: 12.5px; color: var(--ink-soft); margin-bottom: 5px; }
+  .field input, .field select, .field textarea { width: 100%; background: var(--bg); border: 1px solid var(--line); color: var(--ink); border-radius: var(--radius); padding: 9px 10px; }
+  .field textarea { resize: vertical; min-height: 60px; }
+  .drawer-body input:disabled, .drawer-body select:disabled, .drawer-body textarea:disabled { opacity: 0.85; cursor: default; }
+  .drawer-body .step:disabled { cursor: default; }
+  .readonly-note { font-size: 12.5px; color: var(--ink-soft); align-self: center; }
+  .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .checkbox-field { display: flex; align-items: center; }
+  .checkbox-label { display: flex !important; align-items: center; gap: 8px; font-size: 13.5px; color: var(--ink); cursor: pointer; }
+  .checkbox-label input[type="checkbox"] { width: auto; accent-color: var(--accent); }
+  .field-error { color: var(--rust); font-size: 12px; margin-top: 10px; }
+
+  .combo-wrap { position: relative; }
+  .combo-options {
+    position: absolute; top: calc(100% + 4px); left: 0; right: 0; z-index: 30;
+    background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+    max-height: 220px; overflow-y: auto; display: none; box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+  }
+  .combo-options.open { display: block; }
+  .combo-option { padding: 8px 10px; font-size: 13.5px; cursor: pointer; }
+  .combo-option:hover, .combo-option.hover { background: var(--surface-2); }
+  .combo-option.otro-opt { border-top: 1px dashed var(--line); color: var(--ink-soft); }
+  .combo-empty { padding: 10px; font-size: 12.5px; color: var(--ink-soft); }
+
+  .stepper { display: flex; gap: 4px; margin-bottom: 16px; flex-wrap: wrap; }
+  .step { flex: 1; min-width: 70px; text-align: center; font-size: 11.5px; padding: 7px 4px; border: 1px solid var(--line); background: var(--bg); color: var(--ink-soft); border-radius: var(--radius); }
+  .step.active { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); font-weight: 600; }
+  .step.past { color: var(--ink); }
+  .meta-line { font-size: 12px; color: var(--ink-soft); margin: -8px 0 16px; }
+
+  .drawer-foot { padding: 14px 20px; border-top: 1px solid var(--line); display: flex; gap: 10px; justify-content: space-between; }
+  .btn-secondary { background: none; border: 1px solid var(--line); color: var(--ink-soft); border-radius: var(--radius); padding: 9px 14px; font-size: 13.5px; }
+  .btn-danger { color: var(--rust); border-color: var(--rust); }
+
+  .notes-log { border-top: 1px dashed var(--line); margin-top: 6px; padding-top: 14px; }
+  .notes-log h3 { font-size: 13px; margin: 0 0 10px; color: var(--ink-soft); font-weight: 600; }
+  .note-item { padding: 8px 0; border-bottom: 1px solid var(--line); font-size: 13px; }
+  .note-item:last-child { border-bottom: none; }
+  .note-item time { display: block; font-family: "IBM Plex Mono", monospace; font-size: 11px; color: var(--ink-soft); margin-bottom: 3px; }
+  .note-item .autor { color: var(--ink-soft); }
+  .add-note { display: flex; gap: 8px; margin-top: 10px; }
+  .add-note textarea { flex: 1; min-height: 40px; }
+  .add-note button { align-self: flex-end; }
+
+  .modal-overlay { position: fixed; inset: 0; background: rgba(10,15,13,0.45); z-index: 60; display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: opacity 0.15s ease; padding: 16px; }
+  .modal-overlay.open { opacity: 1; pointer-events: auto; }
+  .modal-card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 20px; width: 300px; max-width: 100%; }
+  .modal-card.wide { width: 400px; }
+  .modal-card p { font-size: 14px; margin: 0 0 16px; }
+  .modal-card h2 { font-size: 15px; margin: 0 0 4px; }
+  .modal-card .sub { font-size: 12.5px; color: var(--ink-soft); margin: 0 0 16px; }
+  .modal-actions { display: flex; gap: 8px; justify-content: flex-end; }
+  .modal-card input { width: 100%; background: var(--bg); border: 1px solid var(--line); color: var(--ink); border-radius: var(--radius); padding: 9px 10px; margin-bottom: 14px; }
+
+  .prov-list { display: flex; flex-direction: column; gap: 6px; max-height: 260px; overflow-y: auto; margin-bottom: 14px; }
+  .prov-item { display: flex; align-items: center; justify-content: space-between; gap: 8px; background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius); padding: 8px 10px; font-size: 13.5px; }
+  .prov-item .prov-name { background: none; border: none; color: var(--ink); font-size: 13.5px; text-align: left; flex: 1; padding: 2px 0; cursor: pointer; }
+  .prov-item .prov-name:hover { text-decoration: underline; }
+  .prov-item .prov-del { background: none; border: none; color: var(--ink-soft); font-size: 15px; line-height: 1; padding: 2px 4px; }
+  .prov-item .prov-del:hover { color: var(--rust); }
+  .prov-add-row { display: flex; gap: 8px; }
+  .prov-add-row input { margin-bottom: 0; flex: 1; }
+  .prov-empty { font-size: 12.5px; color: var(--ink-soft); padding: 10px 0; }
+
+  @media (max-width: 760px) {
+    .stats { grid-template-columns: repeat(2, 1fr); }
+    .field-row { grid-template-columns: 1fr; }
+    .drawer { width: 100%; }
+  }
+</style>
+</head>
+<body>
+
+<div class="login-wrap" id="loginWrap">
+  <div class="login-card">
+    <h1>Seguimiento de servicio técnico</h1>
+    <p>Ingresá con la cuenta que te dio el administrador.</p>
+    <p class="login-error" id="loginError"></p>
+    <label for="loginEmail">Correo</label>
+    <input type="email" id="loginEmail" autocomplete="username">
+    <label for="loginPassword">Contraseña</label>
+    <input type="password" id="loginPassword" autocomplete="current-password">
+    <button class="btn-primary" id="loginBtn" type="button" style="width:100%">Iniciar sesión</button>
+  </div>
+</div>
+
+<div class="app hidden" id="appRoot">
+  <div class="topbar">
+    <div>
+      <h1>Seguimiento de servicio técnico</h1>
+      <p>Envíos a proveedor, retiros y visitas técnicas — visible para todo el equipo.</p>
+    </div>
+    <div class="header-actions">
+      <span class="user-chip" id="userChip"></span>
+      <button class="btn-plain" id="visitaNavBtn" type="button">Visita técnica</button>
+      <button class="btn-plain" id="historialBtn" type="button">Historial</button>
+      <button class="btn-plain" id="provBtn" type="button">Proveedores</button>
+      <button class="theme-toggle" id="themeToggle" type="button">Modo oscuro</button>
+      <button class="btn-export" id="exportBtn" type="button">Exportar a Excel</button>
+      <button class="btn-plain" id="logoutBtn" type="button">Cerrar sesión</button>
+      <button class="btn-primary" id="newCaseBtn" type="button">Nuevo caso</button>
+    </div>
+  </div>
+
+  <p class="connection-note" id="connectionNote"></p>
+
+  <div id="pageMain">
+    <div class="stats" id="stats"></div>
+
+    <div class="filters">
+      <select id="filterEstado">
+        <option value="">Todos los estados</option>
+        <option value="pendiente">Pendiente</option>
+        <option value="proceso">En proceso</option>
+        <option value="listo">Listo para entrega</option>
+      </select>
+      <input type="search" id="filterSearch" placeholder="Buscar por cliente, ticket, producto o taller">
+      <span class="count" id="resultCount"></span>
+    </div>
+
+    <div class="board" id="ticketList">
+      <div class="empty"><b>Cargando casos…</b>Esto solo toma un instante.</div>
+    </div>
+  </div>
+
+  <div id="pageVisita" class="hidden">
+    <div class="topbar" style="margin-bottom:16px">
+      <div>
+        <h1 style="font-size:18px">Visita técnica</h1>
+        <p>Casos que requieren una visita a domicilio del cliente.</p>
+      </div>
+      <div class="header-actions">
+        <button class="btn-plain" id="volverBtn" type="button">← Volver</button>
+      </div>
+    </div>
+    <div class="board-solo" id="visitaBoard"></div>
+  </div>
+</div>
+
+<div class="scrim" id="scrim"></div>
+<div class="drawer" id="drawer">
+  <div class="drawer-head">
+    <h2 id="drawerTitle">Nuevo caso</h2>
+    <button class="drawer-close" id="drawerClose" type="button">&times;</button>
+  </div>
+  <div class="drawer-body" id="drawerBody"></div>
+  <div class="drawer-foot" id="drawerFoot"></div>
+</div>
+
+<div class="modal-overlay" id="confirmBox">
+  <div class="modal-card">
+    <p id="confirmText">¿Confirmás esta acción?</p>
+    <div class="modal-actions">
+      <button class="btn-secondary" id="confirmCancel" type="button">Cancelar</button>
+      <button class="btn-primary" id="confirmOk" type="button" style="background:var(--rust)">Eliminar</button>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="provOverlay">
+  <div class="modal-card wide">
+    <div id="provModalBody"></div>
+    <div class="modal-actions" style="margin-top:14px">
+      <button class="btn-secondary" id="provCloseBtn" type="button">Cerrar</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  "use strict";
+
+  var SUPABASE_URL = "https://qpxsrgkoypsqtuyynmit.supabase.co";
+  var SUPABASE_KEY = "sb_publishable_Jt5ThVth-80V97Db2w2d9A_1Yi-kR7v";
+  var sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+
+  var THEME_KEY = "sat_seguimiento_tema_v1";
+  var OTRO_VALUE = "__otros__";
+
+  var TIPOS = { envio: "Envío a proveedor", retiro: "Retiro de producto", visita: "Visita técnica" };
+  var LUGARES_COMPRA = ["Nissei Asunción", "Compra WEB", "Nissei CDE", "Otros"];
+  var ESTADOS = [
+    { id: "pendiente", label: "Pendiente" },
+    { id: "proceso", label: "En proceso" },
+    { id: "listo", label: "Listo para entrega" },
+    { id: "cerrado", label: "Cerrado" }
+  ];
+  // Rol "consulta": solo puede ver los casos del tablero principal; en Visita técnica puede trabajar normalmente
+  function esConsulta() { return myRole === "consulta"; }
+  function estadoLabel(id) { for (var i = 0; i < ESTADOS.length; i++) if (ESTADOS[i].id === id) return ESTADOS[i].label; return id; }
+
+  var state = { casos: [], filtro: { estado: "", q: "" }, pendingDeleteId: null };
+  var proveedoresList = [];
+  var myName = "", myRole = "usuario", myUserId = null;
+
+  // ---------- Utilidades ----------
+  function pad(n) { return n < 10 ? "0" + n : "" + n; }
+  function todayISO() { var d = new Date(); return d.getFullYear() + "-" + pad(d.getMonth() + 1) + "-" + pad(d.getDate()); }
+  function nowStamp() { var d = new Date(); return d.getFullYear() + "-" + pad(d.getMonth() + 1) + "-" + pad(d.getDate()) + " " + pad(d.getHours()) + ":" + pad(d.getMinutes()); }
+  function fmtDate(iso) { if (!iso) return "-"; var p = iso.split("-"); return p.length === 3 ? p[2] + "/" + p[1] + "/" + p[0] : iso; }
+  function escapeHtml(s) { return (s || "").replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
+  function newFolio() { return "T-" + Date.now().toString(36).toUpperCase() + "-" + Math.random().toString(36).slice(2, 5).toUpperCase(); }
+
+  function fromRow(row) {
+    return {
+      id: row.id, tipo: row.tipo, cliente: row.cliente || {}, producto: row.producto || {},
+      falla: row.falla || "", proveedor: row.proveedor || "", proveedorDetalle: row.proveedor_detalle || "",
+      direccion: row.direccion || "", tecnico: row.tecnico || "", prioridad: row.prioridad || "normal",
+      estado: row.estado || "pendiente", fechaIngreso: row.fecha_ingreso || "", fechaActualizacion: row.fecha_actualizacion || "",
+      creadoPor: row.creado_por || "", lugarCompra: row.lugar_compra || LUGARES_COMPRA[0],
+      requierePago: !!row.requiere_pago, abonadoTransferencia: !!row.abonado_transferencia, fechaProgramada: row.fecha_programada || "", alarmaDesactivada: !!row.alarma_desactivada, notas: row.notas || []
+    };
+  }
+
+  function setConnectionNote(text, isError) {
+    var el = document.getElementById("connectionNote");
+    if (!text) { el.classList.remove("show", "error"); return; }
+    el.textContent = text; el.classList.add("show");
+    if (isError) el.classList.add("error"); else el.classList.remove("error");
+  }
+
+  // ---------- Autenticación ----------
+  function showLogin(errorMsg) {
+    document.getElementById("loginWrap").classList.remove("hidden");
+    document.getElementById("appRoot").classList.add("hidden");
+    var errEl = document.getElementById("loginError");
+    if (errorMsg) { errEl.textContent = errorMsg; errEl.classList.add("show"); }
+    else { errEl.classList.remove("show"); }
+  }
+
+  function showApp() {
+    document.getElementById("loginWrap").classList.add("hidden");
+    document.getElementById("appRoot").classList.remove("hidden");
+  }
+
+  function handleLogin() {
+    var email = document.getElementById("loginEmail").value.trim();
+    var password = document.getElementById("loginPassword").value;
+    if (!email || !password) { showLogin("Completá el correo y la contraseña."); return; }
+    var btn = document.getElementById("loginBtn");
+    btn.disabled = true;
+    sb.auth.signInWithPassword({ email: email, password: password }).then(function (res) {
+      btn.disabled = false;
+      if (res.error) { showLogin("No se pudo iniciar sesión: correo o contraseña incorrectos."); return; }
+      onLoggedIn(res.data.session);
+    });
+  }
+
+  function handleLogout() {
+    sb.auth.signOut().then(function () {
+      state.casos = [];
+      document.getElementById("loginEmail").value = "";
+      document.getElementById("loginPassword").value = "";
+      showLogin();
+    });
+  }
+
+  function onLoggedIn(session) {
+    myUserId = session.user.id;
+    sb.from("profiles").select("nombre, role").eq("id", myUserId).single().then(function (res) {
+      if (res.error || !res.data) {
+        myName = session.user.email; myRole = "usuario";
+        setConnectionNote("Tu cuenta todavía no tiene un perfil asignado (nombre/rol). Pedile al administrador que lo cargue en Supabase. Mientras tanto vas a poder usar la app como usuario común.", true);
+      } else {
+        myName = res.data.nombre || session.user.email;
+        myRole = res.data.role || "usuario";
+      }
+      document.getElementById("userChip").innerHTML = '<b>' + escapeHtml(myName) + '</b><span class="role-tag">' + (myRole === "admin" ? "Administrador" : (esConsulta() ? "Solo consulta" : "Usuario")) + '</span>';
+      document.getElementById("provBtn").style.display = myRole === "admin" ? "inline-block" : "none";
+      updateNewCaseBtn();
+      showApp();
+      loadCasos();
+      subscribeRealtimeCasos();
+      loadProveedores();
+      subscribeRealtimeProveedores();
+    });
+  }
+
+  document.getElementById("loginBtn").addEventListener("click", handleLogin);
+  document.getElementById("loginPassword").addEventListener("keydown", function (e) { if (e.key === "Enter") handleLogin(); });
+  document.getElementById("logoutBtn").addEventListener("click", handleLogout);
+
+  // ---------- Carga y tiempo real: casos ----------
+  function loadCasos() {
+    sb.from("casos").select("*").order("fecha_ingreso", { ascending: false }).limit(500)
+      .then(function (res) {
+        if (res.error) { setConnectionNote("No se pudieron cargar los casos: " + res.error.message, true); return; }
+        state.casos = (res.data || []).map(fromRow);
+        setConnectionNote("");
+        renderAll();
+      });
+  }
+  function subscribeRealtimeCasos() {
+    sb.channel("casos-live").on("postgres_changes", { event: "*", schema: "public", table: "casos" }, function () { loadCasos(); }).subscribe();
+  }
+
+  // ---------- Carga y tiempo real: proveedores ----------
+  function loadProveedores() {
+    sb.from("proveedores").select("*").order("nombre").then(function (res) {
+      if (res.error) return;
+      proveedoresList = res.data || [];
+      renderProvModal();
+    });
+  }
+  function subscribeRealtimeProveedores() {
+    sb.channel("proveedores-live").on("postgres_changes", { event: "*", schema: "public", table: "proveedores" }, function () { loadProveedores(); }).subscribe();
+  }
+
+  // ---------- Render: estadísticas ----------
+  function renderStats() {
+    var casosVisibles = state.casos.filter(function (c) { return c.tipo !== "visita"; });
+    var abiertos = casosVisibles.filter(function (c) { return c.estado !== "cerrado"; }).length;
+    var pendientes = casosVisibles.filter(function (c) { return c.estado === "pendiente"; }).length;
+    var proceso = casosVisibles.filter(function (c) { return c.estado === "proceso"; }).length;
+    var urgentes = casosVisibles.filter(function (c) { return c.prioridad === "urgente" && c.estado !== "cerrado"; }).length;
+    document.getElementById("stats").innerHTML =
+      '<div class="stat abiertos"><b class="mono">' + abiertos + '</b><span>Casos abiertos</span></div>' +
+      '<div class="stat pendiente"><b class="mono">' + pendientes + '</b><span>Pendientes de iniciar</span></div>' +
+      '<div class="stat proceso"><b class="mono">' + proceso + '</b><span>En proceso / esperando</span></div>' +
+      '<div class="stat urgente"><b class="mono">' + urgentes + '</b><span>Urgentes abiertos</span></div>';
+  }
+
+  function filteredCasos() {
+    var f = state.filtro, q = f.q.trim().toLowerCase();
+    return state.casos.filter(function (c) {
+      if (f.estado && c.estado !== f.estado) return false;
+      if (q) {
+        var hay = (c.id + " " + (c.cliente.nombre || "") + " " + (c.producto.descripcion || "") + " " + (c.producto.marcaModelo || "") + " " + (c.proveedor || "") + " " + (c.proveedorDetalle || "")).toLowerCase();
+        if (hay.indexOf(q) === -1) return false;
+      }
+      return true;
+    });
+  }
+
+  var PIPELINE_COLS = [
+    { id: "para_envio", label: "Para Envío", addEstado: "pendiente", match: function (c) { return c.estado === "pendiente"; } },
+    { id: "en_proveedor", label: "En Proveedor", addEstado: "proceso", match: function (c) { return c.estado === "proceso"; } },
+    { id: "retiro_productos", label: "Retiro de productos", addEstado: "listo", match: function (c) { return c.estado === "listo"; } }
+  ];
+  var closedOpen = { para_envio: false, en_proveedor: false, retiro_productos: false, visita: false };
+
+  function sortCasos(arr) {
+    return arr.slice().sort(function (a, b) {
+      var au = a.prioridad === "urgente" ? 0 : 1, bu = b.prioridad === "urgente" ? 0 : 1;
+      if (au !== bu) return au - bu;
+      return (b.fechaIngreso || "").localeCompare(a.fechaIngreso || "");
+    });
+  }
+
+  function cardTemplate(c) {
+    var done = c.estado === "cerrado";
+    var tags = "";
+    if (c.fechaProgramada && !done) {
+      if (c.alarmaDesactivada) tags += '<span class="tag-gestionado">Gestionado ' + fmtDate(c.fechaProgramada).slice(0, 5) + '</span>';
+      else if (c.fechaProgramada < todayISO()) tags += '<span class="tag-vencido">Vencido ' + fmtDate(c.fechaProgramada).slice(0, 5) + '</span>';
+      else tags += '<span class="tag-programado">Prog. ' + fmtDate(c.fechaProgramada).slice(0, 5) + '</span>';
+    }
+    if (c.prioridad === "urgente") tags += '<span class="tag-urgente">Urgente</span>';
+    if (c.abonadoTransferencia) tags += '<span class="tag-abonado">Abonado (transf.)</span>';
+    else if (c.requierePago) tags += '<span class="tag-pago">A abonar</span>';
+    var proveedorNombre = c.proveedor === "Otros" ? (c.proveedorDetalle || "Otros") : c.proveedor;
+    return (
+      '<button class="board-card" data-estado="' + c.estado + '" data-id="' + c.id + '" type="button">' +
+        '<div class="board-card-top">' +
+          '<span class="board-card-cliente' + (done ? " done" : "") + '">' + escapeHtml(c.cliente.nombre || "Sin nombre") + '</span>' +
+          (tags ? '<span class="board-card-tags">' + tags + '</span>' : '') +
+        '</div>' +
+        '<div class="board-card-producto">' + escapeHtml(c.producto.descripcion || c.producto.marcaModelo || "Sin descripción") + '</div>' +
+        (proveedorNombre ? '<div class="board-card-proveedor"><span>Proveedor:</span> ' + escapeHtml(proveedorNombre) + '</div>' : '') +
+        '<div class="board-card-foot">' +
+          '<div class="board-card-foot-row"><span class="board-card-id">' + c.id + '</span><span>' + fmtDate(c.fechaIngreso) + '</span></div>' +
+          '<span class="board-card-badge">' + estadoLabel(c.estado) + '</span>' +
+        '</div>' +
+      '</button>'
+    );
+  }
+
+  function closedBlock(colId, cerrados) {
+    if (!cerrados.length) return "";
+    return (
+      '<button class="closed-toggle' + (closedOpen[colId] ? " open" : "") + '" data-col="' + colId + '" type="button">' +
+        '<span><span class="arrow">›</span> Casos cerrados</span><span class="mono">' + cerrados.length + '</span>' +
+      '</button>' +
+      '<div class="closed-list' + (closedOpen[colId] ? " open" : "") + '" data-col-list="' + colId + '">' + cerrados.map(cardTemplate).join("") + '</div>'
+    );
+  }
+
+  function renderList() {
+    var list = filteredCasos().filter(function (c) { return c.tipo !== "visita"; });
+    document.getElementById("resultCount").textContent = list.length + (list.length === 1 ? " caso" : " casos");
+    var el = document.getElementById("ticketList");
+
+    var visibles = state.casos.filter(function (c) { return c.tipo !== "visita"; });
+    if (visibles.length === 0) {
+      el.innerHTML = '<div class="empty"><b>Todavía no hay casos cargados</b>Registrá un envío o un retiro con "Nuevo caso".</div>';
+      return;
+    }
+
+    var pipelineHtml = PIPELINE_COLS.map(function (col, idx) {
+      var deCol = sortCasos(list.filter(col.match));
+      var cerrados = idx === PIPELINE_COLS.length - 1
+        ? sortCasos(list.filter(function (c) { return c.estado === "cerrado"; }))
+        : [];
+      var abiertosHtml = deCol.length ? deCol.map(cardTemplate).join("") : '<div class="board-empty-col">Sin casos</div>';
+      return (
+        '<div class="board-col">' +
+          '<div class="board-col-head"><h2>' + col.label + '</h2><span class="col-count mono">' + deCol.length + '</span></div>' +
+          (esConsulta() ? '' : '<button class="board-add" data-estado="' + col.addEstado + '" type="button">+ Agregar caso</button>') +
+          '<div class="board-cards">' + abiertosHtml + '</div>' +
+          closedBlock(col.id, cerrados) +
+        '</div>'
+      );
+    }).join("");
+
+    el.innerHTML = '<div class="board">' + pipelineHtml + '</div>';
+
+    Array.prototype.forEach.call(el.querySelectorAll(".board-card"), function (btn) {
+      btn.addEventListener("click", function () { openDetail(btn.getAttribute("data-id")); });
+    });
+    Array.prototype.forEach.call(el.querySelectorAll(".board-add"), function (btn) {
+      btn.addEventListener("click", function () { var est = btn.getAttribute("data-estado"); openNew(est === "listo" ? "retiro" : (est === "proceso" ? "en_proveedor" : "envio"), est); });
+    });
+    Array.prototype.forEach.call(el.querySelectorAll(".closed-toggle"), function (btn) {
+      btn.addEventListener("click", function () { closedOpen[btn.getAttribute("data-col")] = !closedOpen[btn.getAttribute("data-col")]; renderList(); });
+    });
+  }
+
+  function renderAll() { renderStats(); renderList(); }
+
+  // ---------- Navegación entre páginas ----------
+  var currentPage = "main";
+  function showPage(page) {
+    currentPage = page;
+    document.getElementById("pageMain").classList.toggle("hidden", page !== "main");
+    document.getElementById("pageVisita").classList.toggle("hidden", page !== "visita");
+    if (page === "visita") renderVisitaBoard();
+    updateNewCaseBtn();
+  }
+  // El usuario de consulta solo puede crear casos desde la página de Visita técnica
+  function updateNewCaseBtn() {
+    document.getElementById("newCaseBtn").style.display = (esConsulta() && currentPage !== "visita") ? "none" : "";
+  }
+  document.getElementById("visitaNavBtn").addEventListener("click", function () { showPage("visita"); });
+  document.getElementById("volverBtn").addEventListener("click", function () { showPage("main"); });
+
+  // ---------- Tablero de Visita técnica (ventana aparte) ----------
+  function renderVisitaBoard() {
+    var deVisita = state.casos.filter(function (c) { return c.tipo === "visita"; });
+    var abiertos = sortCasos(deVisita.filter(function (c) { return c.estado !== "cerrado"; }));
+    var cerrados = sortCasos(deVisita.filter(function (c) { return c.estado === "cerrado"; }));
+    var abiertosHtml = abiertos.length ? abiertos.map(cardTemplate).join("") : '<div class="board-empty-col">Sin casos pendientes</div>';
+    var html =
+      '<div class="board-col">' +
+        '<div class="board-col-head"><h2>Visita técnica</h2><span class="col-count mono">' + deVisita.length + '</span></div>' +
+        '<button class="board-add" data-estado="pendiente" data-tipo-visita="1" type="button">+ Agregar caso</button>' +
+        '<div class="board-cards">' + abiertosHtml + '</div>' +
+        closedBlock("visita", cerrados) +
+      '</div>';
+    var el = document.getElementById("visitaBoard");
+    el.innerHTML = html;
+    Array.prototype.forEach.call(el.querySelectorAll(".board-card"), function (btn) {
+      btn.addEventListener("click", function () { openDetail(btn.getAttribute("data-id")); });
+    });
+    Array.prototype.forEach.call(el.querySelectorAll(".board-add"), function (btn) {
+      btn.addEventListener("click", function () { openNew("visita", "pendiente"); });
+    });
+    Array.prototype.forEach.call(el.querySelectorAll(".closed-toggle"), function (btn) {
+      btn.addEventListener("click", function () { closedOpen[btn.getAttribute("data-col")] = !closedOpen[btn.getAttribute("data-col")]; renderVisitaBoard(); });
+    });
+  }
+
+  // ---------- Historial de casos cerrados ----------
+  function historialCardTemplate(c) {
+    return (
+      '<button class="board-card" data-estado="cerrado" data-id="' + c.id + '" type="button">' +
+        '<div class="board-card-top">' +
+          '<span class="board-card-cliente done">' + escapeHtml(c.cliente.nombre || "Sin nombre") + '</span>' +
+          '<span class="board-card-badge">' + (TIPOS[c.tipo] || c.tipo) + '</span>' +
+        '</div>' +
+        '<div class="board-card-producto">' + escapeHtml(c.producto.descripcion || c.producto.marcaModelo || "Sin descripción") + '</div>' +
+        '<div class="board-card-foot">' +
+          '<div class="board-card-foot-row"><span class="board-card-id">' + c.id + '</span><span>' + fmtDate(c.fechaActualizacion || c.fechaIngreso) + '</span></div>' +
+        '</div>' +
+      '</button>'
+    );
+  }
+
+  function renderHistorial(filterText) {
+    var q = (filterText || "").trim().toLowerCase();
+    var cerrados = state.casos.filter(function (c) { return c.estado === "cerrado"; });
+    if (q) {
+      cerrados = cerrados.filter(function (c) {
+        var hay = (c.id + " " + (c.cliente.nombre || "") + " " + (c.producto.descripcion || "") + " " + (c.producto.marcaModelo || "") + " " + (c.proveedor || "") + " " + (c.proveedorDetalle || "")).toLowerCase();
+        return hay.indexOf(q) !== -1;
+      });
+    }
+    cerrados = cerrados.slice().sort(function (a, b) { return (b.fechaActualizacion || b.fechaIngreso || "").localeCompare(a.fechaActualizacion || a.fechaIngreso || ""); });
+    var listHtml = cerrados.length
+      ? '<div class="board-cards">' + cerrados.map(historialCardTemplate).join("") + '</div>'
+      : '<div class="prov-empty">No hay casos cerrados' + (q ? " que coincidan con la búsqueda" : "") + '.</div>';
+    document.getElementById("drawerBody").innerHTML =
+      '<div class="field"><input type="search" id="historialSearch" placeholder="Buscar en el historial…" value="' + escapeHtml(filterText || "") + '"></div>' +
+      listHtml;
+    document.getElementById("historialSearch").addEventListener("input", function (e) { renderHistorial(e.target.value); });
+    Array.prototype.forEach.call(document.getElementById("drawerBody").querySelectorAll(".board-card"), function (btn) {
+      btn.addEventListener("click", function () { openDetail(btn.getAttribute("data-id")); });
+    });
+  }
+
+  function openHistorial() {
+    document.getElementById("drawerTitle").textContent = "Historial de casos cerrados";
+    renderHistorial("");
+    document.getElementById("drawerFoot").innerHTML = '<button class="btn-secondary" id="cerrarHistorial" type="button" style="margin-left:auto">Cerrar</button>';
+    document.getElementById("cerrarHistorial").addEventListener("click", closeDrawer);
+    openDrawer();
+  }
+  document.getElementById("historialBtn").addEventListener("click", openHistorial);
+
+  // ---------- Drawer: nuevo caso ----------
+  function openNew(tipoPreset, estadoPreset) {
+    document.getElementById("drawerTitle").textContent = "Nuevo caso";
+    document.getElementById("drawerBody").innerHTML = formTemplate({
+      tipo: tipoPreset || "envio", cliente: {}, producto: {}, proveedor: "", proveedorDetalle: "", direccion: "",
+      tecnico: "", prioridad: "normal", fechaIngreso: todayISO(), falla: "",
+      lugarCompra: LUGARES_COMPRA[0], requierePago: false, abonadoTransferencia: false, fechaProgramada: "", alarmaDesactivada: false
+    });
+    document.getElementById("drawerFoot").innerHTML =
+      '<button class="btn-secondary" id="cancelForm" type="button">Cancelar</button>' +
+      '<button class="btn-primary" id="saveForm" type="button">Guardar caso</button>';
+    bindFormEvents();
+    if (esConsulta()) document.getElementById("f_tipo").disabled = true;
+    document.getElementById("cancelForm").addEventListener("click", closeDrawer);
+    document.getElementById("saveForm").addEventListener("click", function () { handleSaveNew(estadoPreset); });
+    openDrawer();
+  }
+
+  function renderProveedorOptions(filterText) {
+    var box = document.getElementById("f_proveedorOptions");
+    if (!box) return;
+    var q = (filterText || "").trim().toLowerCase();
+    var matches = proveedoresList.filter(function (p) { return !q || p.nombre.toLowerCase().indexOf(q) !== -1; });
+    var html = "";
+    if (matches.length === 0 && q) {
+      html += '<div class="combo-empty">Sin coincidencias</div>';
+    } else {
+      html += matches.map(function (p) {
+        return '<div class="combo-option" data-value="' + escapeHtml(p.nombre) + '">' + escapeHtml(p.nombre) + '</div>';
+      }).join("");
+    }
+    html += '<div class="combo-option otro-opt" data-value="Otros">Otros</div>';
+    box.innerHTML = html;
+    Array.prototype.forEach.call(box.querySelectorAll(".combo-option"), function (opt) {
+      opt.addEventListener("mousedown", function (e) {
+        e.preventDefault();
+        selectProveedorOption(opt.getAttribute("data-value"));
+      });
+    });
+  }
+
+  function selectProveedorOption(name) {
+    var input = document.getElementById("f_proveedorInput");
+    var hidden = document.getElementById("f_proveedorHidden");
+    input.value = name; hidden.value = name;
+    closeProveedorOptions();
+    var wrapOtro = document.getElementById("wrap_proveedorOtro");
+    if (wrapOtro) wrapOtro.style.display = name === "Otros" ? "block" : "none";
+  }
+
+  function closeProveedorOptions() {
+    var box = document.getElementById("f_proveedorOptions");
+    if (box) box.classList.remove("open");
+  }
+
+  function formTemplate(c) {
+    var proveedorSelValue = c.proveedor === "Otros" ? OTRO_VALUE : (c.proveedor || "");
+    var showOtro = proveedorSelValue === OTRO_VALUE;
+    return (
+      '<div class="field"><label for="f_tipo">Tipo de gestión</label>' +
+      '<select id="f_tipo">' +
+        '<option value="envio"' + (c.tipo === "envio" ? " selected" : "") + '>Envío a proveedor</option>' +
+        (!c.id ? '<option value="en_proveedor"' + (c.tipo === "en_proveedor" ? " selected" : "") + '>Orden ya en proveedor</option>' : '') +
+        '<option value="retiro"' + (c.tipo === "retiro" ? " selected" : "") + '>Retiro de producto</option>' +
+        '<option value="visita"' + (c.tipo === "visita" ? " selected" : "") + '>Visita técnica</option>' +
+      '</select></div>' +
+      '<div class="field-row">' +
+        '<div class="field"><label for="f_nombre">ID - Cliente</label><input id="f_nombre" value="' + escapeHtml(c.cliente.nombre) + '" placeholder="ID y Cliente"></div>' +
+        '<div class="field"><label for="f_telefono">Teléfono</label><input id="f_telefono" value="' + escapeHtml(c.cliente.telefono) + '" placeholder="09xx xxx xxx"></div>' +
+      '</div>' +
+      '<div class="field-row">' +
+        '<div class="field"><label for="f_marca">Marca / modelo</label><input id="f_marca" value="' + escapeHtml(c.producto.marcaModelo) + '" placeholder="Ej: Samsung RT38"></div>' +
+        '<div class="field"><label for="f_serie">OT Proveedor (opcional)</label><input id="f_serie" value="' + escapeHtml(c.producto.nroSerie) + '"></div>' +
+      '</div>' +
+      '<div class="field"><label for="f_desc">Tipo de producto</label><input id="f_desc" value="' + escapeHtml(c.producto.descripcion) + '" placeholder="CEL SAMSUNG"></div>' +
+      '<div class="field"><label for="f_falla">Detalle de la falla o el pedido</label><textarea id="f_falla" placeholder="Describí el problema o lo que solicitó el cliente">' + escapeHtml(c.falla) + '</textarea></div>' +
+      '<div class="field" id="wrap_proveedor" style="display:' + (c.tipo === "envio" || c.tipo === "retiro" || c.tipo === "en_proveedor" ? "block" : "none") + '">' +
+        '<label for="f_proveedorInput">Proveedor/service oficial</label>' +
+        '<div class="combo-wrap">' +
+          '<input type="text" id="f_proveedorInput" autocomplete="off" placeholder="Buscar proveedor…" value="' + escapeHtml(proveedorSelValue === OTRO_VALUE ? "Otros" : proveedorSelValue) + '">' +
+          '<input type="hidden" id="f_proveedorHidden" value="' + escapeHtml(proveedorSelValue === OTRO_VALUE ? "Otros" : proveedorSelValue) + '">' +
+          '<div class="combo-options" id="f_proveedorOptions"></div>' +
+        '</div>' +
+        '<div id="wrap_proveedorOtro" style="display:' + (showOtro ? "block" : "none") + ';margin-top:8px">' +
+          '<input type="text" id="f_proveedorOtro" placeholder="Nombre del proveedor / lugar al que se envió" value="' + escapeHtml(c.proveedorDetalle) + '">' +
+        '</div>' +
+      '</div>' +
+      '<div class="field" id="wrap_direccion" style="display:' + (c.tipo === "visita" ? "block" : "none") + '">' +
+        '<label for="f_direccion">Dirección</label><input id="f_direccion" value="' + escapeHtml(c.direccion) + '" placeholder="Domicilio para retiro o visita"></div>' +
+      '<div class="field-row">' +
+        '<div class="field"><label for="f_tecnico">Técnico/Gestor</label><input id="f_tecnico" value="' + escapeHtml(c.tecnico) + '"></div>' +
+        '<div class="field"><label for="f_prioridad">Prioridad</label><select id="f_prioridad">' +
+          '<option value="normal"' + (c.prioridad === "normal" ? " selected" : "") + '>Normal</option>' +
+          '<option value="urgente"' + (c.prioridad === "urgente" ? " selected" : "") + '>Urgente</option>' +
+        '</select></div>' +
+      '</div>' +
+      '<div class="field-row">' +
+        '<div class="field"><label for="f_fecha">Fecha de ingreso</label><input type="date" id="f_fecha" value="' + c.fechaIngreso + '"></div>' +
+        '<div class="field"><label for="f_lugarCompra">Lugar de compra</label><select id="f_lugarCompra">' +
+          LUGARES_COMPRA.map(function (l) { return '<option value="' + l + '"' + (c.lugarCompra === l ? " selected" : "") + '>' + l + '</option>'; }).join("") +
+        '</select></div>' +
+      '</div>' +
+      '<div class="field checkbox-field"><label class="checkbox-label"><input type="checkbox" id="f_requierePago"' + (c.requierePago ? " checked" : "") + '> Es necesario abonar para retirar el producto</label></div>' +
+      '<div class="field checkbox-field"><label class="checkbox-label"><input type="checkbox" id="f_abonadoTransferencia"' + (c.abonadoTransferencia ? " checked" : "") + '> Abonado por transferencia</label></div>' +
+      '<div id="wrap_programar" style="display:' + (c.tipo === "envio" || c.tipo === "retiro" || c.tipo === "en_proveedor" ? "block" : "none") + '">' +
+        '<div class="field checkbox-field"><label class="checkbox-label"><input type="checkbox" id="f_programar"' + (c.fechaProgramada ? " checked" : "") + '> Programar gestión</label></div>' +
+        '<div class="field" id="wrap_fechaProgramada" style="display:' + (c.fechaProgramada ? "block" : "none") + '"><label for="f_fechaProgramada">Fecha programada</label><input type="date" id="f_fechaProgramada" value="' + (c.fechaProgramada || "") + '">' +
+          '<label class="checkbox-label" style="margin-top:8px"><input type="checkbox" id="f_alarmaDesactivada"' + (c.alarmaDesactivada ? " checked" : "") + '> Desactivar alarma (gestión ya realizada)</label>' +
+        '</div>' +
+      '</div>' +
+      '<div class="field-error" id="formError" style="display:none"></div>'
+    );
+  }
+
+  function bindFormEvents() {
+    var tipoSel = document.getElementById("f_tipo");
+    tipoSel.addEventListener("change", function () {
+      document.getElementById("wrap_proveedor").style.display = (tipoSel.value === "envio" || tipoSel.value === "retiro" || tipoSel.value === "en_proveedor") ? "block" : "none";
+      document.getElementById("wrap_direccion").style.display = tipoSel.value === "visita" ? "block" : "none";
+      document.getElementById("wrap_programar").style.display = (tipoSel.value === "envio" || tipoSel.value === "retiro" || tipoSel.value === "en_proveedor") ? "block" : "none";
+    });
+    var progChk = document.getElementById("f_programar");
+    progChk.addEventListener("change", function () {
+      document.getElementById("wrap_fechaProgramada").style.display = progChk.checked ? "block" : "none";
+    });
+    // Si se reprograma la gestión con otra fecha, la alarma vuelve a activarse
+    document.getElementById("f_fechaProgramada").addEventListener("change", function () {
+      document.getElementById("f_alarmaDesactivada").checked = false;
+    });
+    var provInput = document.getElementById("f_proveedorInput");
+    if (provInput) {
+      provInput.addEventListener("focus", function () {
+        renderProveedorOptions(provInput.value);
+        document.getElementById("f_proveedorOptions").classList.add("open");
+      });
+      provInput.addEventListener("input", function () {
+        document.getElementById("f_proveedorHidden").value = "";
+        var wrapOtro = document.getElementById("wrap_proveedorOtro");
+        if (wrapOtro) wrapOtro.style.display = "none";
+        renderProveedorOptions(provInput.value);
+        document.getElementById("f_proveedorOptions").classList.add("open");
+      });
+      provInput.addEventListener("blur", function () { setTimeout(closeProveedorOptions, 120); });
+    }
+  }
+
+  function readForm() {
+    var tipoVal = document.getElementById("f_tipo").value;
+    var provHidden = document.getElementById("f_proveedorHidden");
+    var provOtro = document.getElementById("f_proveedorOtro");
+    var proveedorVal = "", proveedorDetalleVal = "";
+    if (tipoVal === "envio" || tipoVal === "retiro" || tipoVal === "en_proveedor") {
+      var confirmado = provHidden ? provHidden.value : "";
+      if (confirmado === "Otros") { proveedorVal = "Otros"; proveedorDetalleVal = provOtro ? provOtro.value.trim() : ""; }
+      else { proveedorVal = confirmado; }
+    }
+    return {
+      tipo: tipoVal === "en_proveedor" ? "envio" : tipoVal,
+      enProveedor: tipoVal === "en_proveedor",
+      cliente: { nombre: document.getElementById("f_nombre").value.trim(), telefono: document.getElementById("f_telefono").value.trim() },
+      producto: {
+        marcaModelo: document.getElementById("f_marca").value.trim(),
+        nroSerie: document.getElementById("f_serie").value.trim(),
+        descripcion: document.getElementById("f_desc").value.trim()
+      },
+      falla: document.getElementById("f_falla").value.trim(),
+      proveedor: proveedorVal, proveedorDetalle: proveedorDetalleVal,
+      direccion: document.getElementById("f_direccion") ? document.getElementById("f_direccion").value.trim() : "",
+      tecnico: document.getElementById("f_tecnico").value.trim(),
+      prioridad: document.getElementById("f_prioridad").value,
+      fechaIngreso: document.getElementById("f_fecha").value || todayISO(),
+      lugarCompra: document.getElementById("f_lugarCompra").value,
+      requierePago: document.getElementById("f_requierePago").checked,
+      abonadoTransferencia: document.getElementById("f_abonadoTransferencia").checked,
+      programar: tipoVal !== "visita" && document.getElementById("f_programar").checked,
+      fechaProgramada: (tipoVal !== "visita" && document.getElementById("f_programar").checked) ? document.getElementById("f_fechaProgramada").value : "",
+      alarmaDesactivada: (tipoVal !== "visita" && document.getElementById("f_programar").checked) && document.getElementById("f_alarmaDesactivada").checked
+    };
+  }
+
+  function toRow(data) {
+    return {
+      tipo: data.tipo, cliente: data.cliente, producto: data.producto, falla: data.falla,
+      proveedor: data.proveedor, proveedor_detalle: data.proveedorDetalle, direccion: data.direccion, tecnico: data.tecnico,
+      prioridad: data.prioridad, estado: data.estado, fecha_ingreso: data.fechaIngreso,
+      fecha_actualizacion: data.fechaActualizacion, creado_por: data.creadoPor,
+      lugar_compra: data.lugarCompra, requiere_pago: data.requierePago, abonado_transferencia: data.abonadoTransferencia, fecha_programada: data.fechaProgramada || null, alarma_desactivada: !!data.alarmaDesactivada, notas: data.notas
+    };
+  }
+
+  function handleSaveNew(estadoInicial) {
+    var data = readForm();
+    if (!data.cliente.nombre) { showFormError("Ingresá el nombre del cliente."); return; }
+    if ((data.tipo === "envio" || data.tipo === "retiro") && !data.proveedor) { showFormError("Seleccioná un proveedor/service oficial."); return; }
+    if (data.proveedor === "Otros" && !data.proveedorDetalle) { showFormError("Escribí el nombre del proveedor en el campo adicional."); return; }
+    if (data.programar && !data.fechaProgramada) { showFormError("Elegí la fecha de la gestión programada."); return; }
+    // La columna depende del tipo de gestión: "Retiro de producto" va a "Retiro de productos"
+    if (data.enProveedor) data.estado = "proceso";
+    else if (data.tipo === "retiro") data.estado = "listo";
+    else if (estadoInicial && estadoInicial !== "listo") data.estado = estadoInicial;
+    else data.estado = "pendiente";
+    data.fechaActualizacion = todayISO();
+    data.creadoPor = myName;
+    data.notas = [{ fecha: nowStamp(), texto: "Caso creado" + (data.estado !== "pendiente" ? " directamente en estado: " + estadoLabel(data.estado) : "") + ".", autor: myName }];
+    var folio = newFolio();
+    var row = toRow(data); row.id = folio;
+    var saveBtn = document.getElementById("saveForm");
+    saveBtn.disabled = true;
+    sb.from("casos").insert(row).then(function (res) {
+      saveBtn.disabled = false;
+      if (res.error) { showFormError("No se pudo guardar el caso: " + res.error.message); return; }
+      closeDrawer(); loadCasos();
+    });
+  }
+
+  function showFormError(msg) { var el = document.getElementById("formError"); el.textContent = msg; el.style.display = "block"; }
+
+  // ---------- Drawer: detalle / edición ----------
+  function openDetail(id) {
+    var caso = state.casos.filter(function (c) { return c.id === id; })[0];
+    if (!caso) return;
+    document.getElementById("drawerTitle").innerHTML = '<span class="mono">' + caso.id + '</span>';
+    var soloLectura = esConsulta() && caso.tipo !== "visita";
+    document.getElementById("drawerBody").innerHTML = detailTemplate(caso, soloLectura);
+    if (soloLectura) {
+      Array.prototype.forEach.call(document.getElementById("drawerBody").querySelectorAll("input, select, textarea, button"), function (el) { el.disabled = true; });
+      document.getElementById("drawerFoot").innerHTML =
+        '<span class="readonly-note">Solo lectura</span>' +
+        '<button class="btn-secondary" id="cerrarDetalle" type="button">Cerrar</button>';
+      document.getElementById("cerrarDetalle").addEventListener("click", closeDrawer);
+      openDrawer();
+      return;
+    }
+    document.getElementById("drawerFoot").innerHTML =
+      '<button class="btn-secondary btn-danger" id="deleteCase" type="button">Eliminar</button>' +
+      '<button class="btn-primary" id="saveDetail" type="button">Guardar cambios</button>';
+    bindFormEvents();
+    if (esConsulta()) document.getElementById("f_tipo").disabled = true;
+    bindStepper(caso);
+    document.getElementById("saveDetail").addEventListener("click", function () { handleSaveDetail(caso.id); });
+    document.getElementById("deleteCase").addEventListener("click", function () { askDelete(caso.id); });
+    var addNoteBtn = document.getElementById("addNoteBtn");
+    if (addNoteBtn) addNoteBtn.addEventListener("click", function () { handleAddNote(caso.id); });
+    openDrawer();
+  }
+
+  function detailTemplate(c, soloLectura) {
+    var currentIdx = ESTADOS.findIndex(function (e) { return e.id === c.estado; });
+    var stepsHtml = ESTADOS.map(function (s, i) {
+      var cls = s.id === c.estado ? "active" : (i < currentIdx ? "past" : "");
+      return '<button class="step ' + cls + '" data-estado="' + s.id + '" type="button">' + s.label + '</button>';
+    }).join("");
+    var notesHtml = (c.notas || []).slice().reverse().map(function (n) {
+      return '<div class="note-item"><time>' + n.fecha + (n.autor ? ' · <span class="autor">' + escapeHtml(n.autor) + '</span>' : '') + '</time>' + escapeHtml(n.texto) + '</div>';
+    }).join("") || '<p style="color:var(--ink-soft);font-size:13px;">Sin novedades registradas todavía.</p>';
+    return (
+      '<div class="stepper">' + stepsHtml + '</div>' +
+      (c.creadoPor ? '<p class="meta-line">Creado por ' + escapeHtml(c.creadoPor) + '</p>' : '') +
+      formTemplate(c) +
+      '<div class="notes-log">' +
+        '<h3>Historial de seguimiento</h3>' +
+        '<div id="notesList">' + notesHtml + '</div>' +
+        (soloLectura ? '' :
+        '<div class="add-note">' +
+          '<textarea id="newNoteText" placeholder="Agregar novedad: repuesto pedido, cliente contactado, etc."></textarea>' +
+          '<button class="btn-secondary" id="addNoteBtn" type="button">Agregar</button>' +
+        '</div>') +
+      '</div>'
+    );
+  }
+
+  function bindStepper(caso) {
+    Array.prototype.forEach.call(document.querySelectorAll(".step"), function (btn) {
+      btn.addEventListener("click", function () {
+        var nuevoEstado = btn.getAttribute("data-estado");
+        var notas = (caso.notas || []).concat([{ fecha: nowStamp(), texto: "Estado actualizado a: " + estadoLabel(nuevoEstado) + ".", autor: myName }]);
+        sb.from("casos").update({ estado: nuevoEstado, fecha_actualizacion: todayISO(), notas: notas }).eq("id", caso.id)
+          .then(function (res) { if (!res.error) { loadCasos(); openDetail(caso.id); } });
+      });
+    });
+  }
+
+  function handleSaveDetail(id) {
+    var data = readForm();
+    if ((data.tipo === "envio" || data.tipo === "retiro") && !data.proveedor) { showFormError("Seleccioná un proveedor/service oficial."); return; }
+    if (data.proveedor === "Otros" && !data.proveedorDetalle) { showFormError("Escribí el nombre del proveedor en el campo adicional."); return; }
+    if (data.programar && !data.fechaProgramada) { showFormError("Elegí la fecha de la gestión programada."); return; }
+    var saveBtn = document.getElementById("saveDetail");
+    saveBtn.disabled = true;
+    var row = toRow(data);
+    row.fecha_actualizacion = todayISO();
+    delete row.estado; delete row.notas; delete row.creado_por;
+    sb.from("casos").update(row).eq("id", id).then(function (res) {
+      saveBtn.disabled = false;
+      if (res.error) { showFormError("No se pudieron guardar los cambios: " + res.error.message); return; }
+      closeDrawer(); loadCasos();
+    });
+  }
+
+  function handleAddNote(id) {
+    var caso = state.casos.filter(function (c) { return c.id === id; })[0];
+    if (!caso) return;
+    var text = document.getElementById("newNoteText").value.trim();
+    if (!text) return;
+    var notas = (caso.notas || []).concat([{ fecha: nowStamp(), texto: text, autor: myName }]);
+    sb.from("casos").update({ notas: notas, fecha_actualizacion: todayISO() }).eq("id", id)
+      .then(function (res) { if (!res.error) { loadCasos(); openDetail(id); } });
+  }
+
+  // ---------- Confirmación de borrado de caso ----------
+  function askDelete(id) {
+    state.pendingDeleteId = id;
+    document.getElementById("confirmText").textContent = "¿Eliminar el caso " + id + "? Esta acción no se puede deshacer.";
+    document.getElementById("confirmBox").classList.add("open");
+  }
+  function closeConfirm() { state.pendingDeleteId = null; document.getElementById("confirmBox").classList.remove("open"); }
+  document.getElementById("confirmCancel").addEventListener("click", closeConfirm);
+  document.getElementById("confirmOk").addEventListener("click", function () {
+    if (state.pendingDeleteId) {
+      sb.from("casos").delete().eq("id", state.pendingDeleteId).then(function () { closeConfirm(); closeDrawer(); loadCasos(); });
+    }
+  });
+
+  // ---------- Panel de proveedores (solo admin) ----------
+  var provEditingId = null;
+
+  function renderProvModal() {
+    var body = document.getElementById("provModalBody");
+    if (!body) return;
+    if (provEditingId) { renderProvFicha(body); } else { renderProvList(body); }
+  }
+
+  function renderProvList(body) {
+    var listHtml = proveedoresList.length === 0
+      ? '<p class="prov-empty">Todavía no cargaste ningún proveedor.</p>'
+      : proveedoresList.map(function (p) {
+          return '<div class="prov-item">' +
+            '<button type="button" class="prov-name" data-id="' + p.id + '">' + escapeHtml(p.nombre) + '</button>' +
+            (myRole === "admin" ? '<button type="button" class="prov-del" data-id="' + p.id + '" title="Eliminar">&times;</button>' : '') +
+          '</div>';
+        }).join("");
+    var addRow = myRole === "admin"
+      ? '<div class="prov-add-row" id="provAddRow"><input type="text" id="provNewName" placeholder="Nombre del proveedor"><button class="btn-primary" id="provAddBtn" type="button">Agregar</button></div>'
+      : '';
+    body.innerHTML =
+      '<h2>Proveedores / service oficiales</h2>' +
+      '<p class="sub" id="provSub">' + (myRole === "admin" ? "Tocá un proveedor para ver o editar su ficha." : 'Se usan en el desplegable de "Envío a proveedor" y "Retiro de producto".') + '</p>' +
+      '<div class="prov-list" id="provList">' + listHtml + '</div>' +
+      addRow;
+
+    Array.prototype.forEach.call(body.querySelectorAll(".prov-name"), function (btn) {
+      btn.addEventListener("click", function () { if (myRole === "admin") openProvFicha(btn.getAttribute("data-id")); });
+    });
+    Array.prototype.forEach.call(body.querySelectorAll(".prov-del"), function (btn) {
+      btn.addEventListener("click", function (e) { e.stopPropagation(); deleteProveedor(btn.getAttribute("data-id")); });
+    });
+    var addBtn = document.getElementById("provAddBtn");
+    if (addBtn) {
+      addBtn.addEventListener("click", addProveedor);
+      document.getElementById("provNewName").addEventListener("keydown", function (e) { if (e.key === "Enter") addProveedor(); });
+    }
+  }
+
+  function renderProvFicha(body) {
+    var p = proveedoresList.filter(function (x) { return x.id === provEditingId; })[0];
+    if (!p) { provEditingId = null; renderProvList(body); return; }
+    body.innerHTML =
+      '<h2>Ficha de proveedor</h2>' +
+      '<p class="sub">Solo el administrador puede editar estos datos.</p>' +
+      '<div class="field"><label for="pf_nombre">Nombre de proveedor</label><input id="pf_nombre" value="' + escapeHtml(p.nombre) + '"></div>' +
+      '<div class="field"><label for="pf_contacto">Nro contacto</label><input id="pf_contacto" value="' + escapeHtml(p.contacto || "") + '"></div>' +
+      '<div class="field"><label for="pf_ubicacion">Ubicación (enlace de Maps)</label><input id="pf_ubicacion" value="' + escapeHtml(p.ubicacion || "") + '"></div>' +
+      '<div class="field"><label for="pf_direccion">Dirección</label><input id="pf_direccion" value="' + escapeHtml(p.direccion || "") + '"></div>' +
+      '<div class="field-row">' +
+        '<div class="field"><label for="pf_horarioLv">Horario Lunes a Viernes</label><input id="pf_horarioLv" value="' + escapeHtml(p.horario_lv || "") + '"></div>' +
+        '<div class="field"><label for="pf_horarioSab">Horario Sábados</label><input id="pf_horarioSab" value="' + escapeHtml(p.horario_sabado || "") + '"></div>' +
+      '</div>' +
+      '<div class="field"><label for="pf_obs">Obs</label><textarea id="pf_obs">' + escapeHtml(p.obs || "") + '</textarea></div>' +
+      '<div class="field-error" id="fichaError" style="display:none"></div>' +
+      '<div class="modal-actions" style="margin-top:0">' +
+        '<button class="btn-secondary" id="fichaVolver" type="button">Volver a la lista</button>' +
+        '<button class="btn-primary" id="fichaGuardar" type="button">Guardar</button>' +
+      '</div>';
+    document.getElementById("fichaVolver").addEventListener("click", function () { provEditingId = null; renderProvModal(); });
+    document.getElementById("fichaGuardar").addEventListener("click", saveProvFicha);
+  }
+
+  function showFichaError(msg) {
+    var el = document.getElementById("fichaError");
+    if (el) { el.textContent = msg; el.style.display = "block"; }
+  }
+
+  function saveProvFicha() {
+    var nombre = document.getElementById("pf_nombre").value.trim();
+    if (!nombre) { showFichaError("El nombre no puede quedar vacío."); return; }
+    var payload = {
+      nombre: nombre,
+      contacto: document.getElementById("pf_contacto").value.trim(),
+      ubicacion: document.getElementById("pf_ubicacion").value.trim(),
+      direccion: document.getElementById("pf_direccion").value.trim(),
+      horario_lv: document.getElementById("pf_horarioLv").value.trim(),
+      horario_sabado: document.getElementById("pf_horarioSab").value.trim(),
+      obs: document.getElementById("pf_obs").value.trim()
+    };
+    var btn = document.getElementById("fichaGuardar");
+    btn.disabled = true;
+    sb.from("proveedores").update(payload).eq("id", provEditingId).then(function (res) {
+      btn.disabled = false;
+      if (res.error) { showFichaError("No se pudo guardar: " + res.error.message); return; }
+      provEditingId = null;
+      loadProveedores();
+    });
+  }
+
+  function openProvFicha(id) { provEditingId = id; renderProvModal(); }
+
+  function openProvModal() {
+    provEditingId = null;
+    renderProvModal();
+    document.getElementById("provOverlay").classList.add("open");
+  }
+  function closeProvModal() { provEditingId = null; document.getElementById("provOverlay").classList.remove("open"); }
+
+  function addProveedor() {
+    var input = document.getElementById("provNewName");
+    var nombre = input.value.trim();
+    if (!nombre) return;
+    var btn = document.getElementById("provAddBtn");
+    btn.disabled = true;
+    sb.from("proveedores").insert({ nombre: nombre }).then(function (res) {
+      btn.disabled = false;
+      if (res.error) { document.getElementById("provSub").textContent = "No se pudo agregar: " + res.error.message; return; }
+      input.value = "";
+      loadProveedores();
+    });
+  }
+
+  function deleteProveedor(id) {
+    sb.from("proveedores").delete().eq("id", id).then(function (res) {
+      if (!res.error) loadProveedores();
+    });
+  }
+
+  document.getElementById("provBtn").addEventListener("click", openProvModal);
+  document.getElementById("provCloseBtn").addEventListener("click", closeProvModal);
+
+  // ---------- Drawer open/close ----------
+  function openDrawer() { document.getElementById("drawer").classList.add("open"); document.getElementById("scrim").classList.add("open"); }
+  function closeDrawer() { document.getElementById("drawer").classList.remove("open"); document.getElementById("scrim").classList.remove("open"); }
+  document.getElementById("scrim").addEventListener("click", function () { closeDrawer(); closeConfirm(); closeProvModal(); });
+  document.getElementById("drawerClose").addEventListener("click", closeDrawer);
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") { closeDrawer(); closeConfirm(); closeProvModal(); } });
+  document.getElementById("newCaseBtn").addEventListener("click", function () { if (currentPage === "visita") openNew("visita", "pendiente"); else openNew("envio"); });
+
+  // ---------- Filtros ----------
+  document.getElementById("filterEstado").addEventListener("change", function (e) { state.filtro.estado = e.target.value; renderList(); });
+  document.getElementById("filterSearch").addEventListener("input", function (e) { state.filtro.q = e.target.value; renderList(); });
+
+  // ---------- Tema ----------
+  function applyTheme(t) {
+    if (t === "dark") { document.documentElement.setAttribute("data-theme", "dark"); document.getElementById("themeToggle").textContent = "Modo claro"; }
+    else if (t === "light") { document.documentElement.setAttribute("data-theme", "light"); document.getElementById("themeToggle").textContent = "Modo oscuro"; }
+    else { document.documentElement.removeAttribute("data-theme"); document.getElementById("themeToggle").textContent = "Modo oscuro"; }
+  }
+  function loadTheme() { try { return localStorage.getItem(THEME_KEY) || ""; } catch (e) { return ""; } }
+  function saveTheme(v) { try { localStorage.setItem(THEME_KEY, v); } catch (e) {} }
+  applyTheme(loadTheme());
+  document.getElementById("themeToggle").addEventListener("click", function () {
+    var isDark = document.documentElement.getAttribute("data-theme") === "dark" ||
+      (!document.documentElement.getAttribute("data-theme") && window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches);
+    var next = isDark ? "light" : "dark";
+    applyTheme(next); saveTheme(next);
+  });
+
+  // ---------- Exportar a Excel ----------
+  function handleExport() {
+    if (typeof XLSX === "undefined") { setConnectionNote("No se pudo cargar el generador de Excel. Revisá tu conexión e intentá de nuevo.", true); return; }
+    var rows = state.casos.map(function (c) {
+      var ultimaNota = (c.notas && c.notas.length) ? c.notas[c.notas.length - 1].texto : "";
+      return {
+        "Ticket": c.id, "Tipo de gestión": TIPOS[c.tipo] || c.tipo,
+        "Cliente": c.cliente.nombre || "", "Teléfono": c.cliente.telefono || "",
+        "Marca / modelo": c.producto.marcaModelo || "", "OT Proveedor": c.producto.nroSerie || "",
+        "Tipo de producto": c.producto.descripcion || "", "Falla / pedido": c.falla || "",
+        "Proveedor": c.proveedor || "", "Proveedor (detalle si es Otros)": c.proveedorDetalle || "",
+        "Dirección": c.direccion || "", "Técnico/Gestor": c.tecnico || "",
+        "Lugar de compra": c.lugarCompra || "", "Requiere pago para retiro": c.requierePago ? "Sí" : "No", "Abonado por transferencia": c.abonadoTransferencia ? "Sí" : "No", "Fecha programada": c.fechaProgramada || "", "Alarma desactivada": c.alarmaDesactivada ? "Sí" : "No",
+        "Prioridad": c.prioridad === "urgente" ? "Urgente" : "Normal", "Estado": estadoLabel(c.estado),
+        "Fecha de ingreso": c.fechaIngreso || "", "Última actualización": c.fechaActualizacion || "",
+        "Creado por": c.creadoPor || "", "Última novedad": ultimaNota, "Cantidad de novedades": (c.notas || []).length
+      };
+    });
+    var ws = XLSX.utils.json_to_sheet(rows);
+    var wb = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(wb, ws, "Casos");
+    var arrayBuf = XLSX.write(wb, { bookType: "xlsx", type: "array" });
+    var blob = new Blob([arrayBuf], { type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" });
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement("a");
+    a.href = url; a.download = "casos_servicio_tecnico_" + todayISO() + ".xlsx";
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    setTimeout(function () { URL.revokeObjectURL(url); }, 2000);
+  }
+  document.getElementById("exportBtn").addEventListener("click", handleExport);
+
+  // ---------- Init ----------
+  sb.auth.getSession().then(function (res) {
+    if (res.data && res.data.session) { onLoggedIn(res.data.session); }
+    else { showLogin(); }
+  });
+})();
+</script>
+</body>
+</html>
