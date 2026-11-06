@@ -80,6 +80,17 @@
   .stat.proceso { border-left-color: var(--blue); }
   .stat.urgente { border-left-color: var(--rust); }
   .stat.abiertos { border-left-color: var(--accent); }
+  .stat-rank { font-size: 11px; color: var(--ink-soft); margin-right: 2px; }
+  .stat .stat-name { color: var(--ink); font-weight: 600; }
+  .modal-card input:disabled, .modal-card textarea:disabled { opacity: 0.85; cursor: default; }
+  .prov-link { display: inline-block; font-size: 12.5px; color: var(--accent); margin-top: 6px; }
+
+  .toast-stack { position: fixed; right: 16px; bottom: 16px; z-index: 80; display: flex; flex-direction: column; gap: 8px; max-width: calc(100% - 32px); width: 340px; }
+  .toast { background: var(--surface); border: 1px solid var(--line); border-left: 4px solid var(--accent); border-radius: var(--radius); padding: 10px 34px 10px 12px; font-size: 13px; box-shadow: 0 6px 20px rgba(0,0,0,0.18); position: relative; cursor: pointer; animation: toastIn 0.2s ease; }
+  .toast b { display: block; font-size: 13.5px; margin-bottom: 2px; }
+  .toast .toast-sub { color: var(--ink-soft); font-size: 12px; margin-top: 3px; }
+  .toast-close { position: absolute; top: 6px; right: 8px; background: none; border: none; color: var(--ink-soft); font-size: 16px; line-height: 1; }
+  @keyframes toastIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
 
   .filters { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin-bottom: 16px; }
   .filters select, .filters input[type="search"] { background: var(--surface); border: 1px solid var(--line); color: var(--ink); border-radius: var(--radius); padding: 8px 10px; font-size: 13.5px; }
@@ -414,7 +425,8 @@
         myRole = res.data.role || "usuario";
       }
       document.getElementById("userChip").innerHTML = '<b>' + escapeHtml(myName) + '</b><span class="role-tag">' + (myRole === "admin" ? "Administrador" : (esConsulta() ? "Solo consulta" : "Usuario")) + '</span>';
-      document.getElementById("provBtn").style.display = myRole === "admin" ? "inline-block" : "none";
+      document.getElementById("provBtn").style.display = "inline-block";
+      initNotificaciones();
       updateNewCaseBtn();
       showApp();
       loadCasos();
@@ -439,7 +451,56 @@
       });
   }
   function subscribeRealtimeCasos() {
-    sb.channel("casos-live").on("postgres_changes", { event: "*", schema: "public", table: "casos" }, function () { loadCasos(); }).subscribe();
+    sb.channel("casos-live").on("postgres_changes", { event: "*", schema: "public", table: "casos" }, function (payload) {
+      if (payload && payload.eventType === "UPDATE" && payload.new) avisarCambioEstado(payload.new);
+      loadCasos();
+    }).subscribe();
+  }
+
+  // ---------- Notificaciones de cambio de estado ----------
+  function avisarCambioEstado(row) {
+    var previo = state.casos.filter(function (c) { return c.id === row.id; })[0];
+    if (!previo || !row.estado || previo.estado === row.estado) return;
+    var notas = row.notas || [];
+    var autor = notas.length ? (notas[notas.length - 1].autor || "") : "";
+    if (autor && autor === myName) return; // quien hizo el cambio no necesita el aviso
+    var titulo = ((row.cliente && row.cliente.nombre) || row.id) + " → " + estadoLabel(row.estado);
+    var detalle = (TIPOS[row.tipo] || "Caso") + " · " + row.id + (autor ? " · por " + autor : "");
+    mostrarToast(titulo, detalle, row.id);
+    notificarSistema(titulo, detalle);
+  }
+
+  function mostrarToast(titulo, detalle, casoId) {
+    var stack = document.getElementById("toastStack");
+    if (!stack) { stack = document.createElement("div"); stack.id = "toastStack"; stack.className = "toast-stack"; document.body.appendChild(stack); }
+    var t = document.createElement("div");
+    t.className = "toast";
+    t.innerHTML = '<button class="toast-close" type="button" title="Cerrar">&times;</button>' +
+      '<b>' + escapeHtml(titulo) + '</b><div class="toast-sub">' + escapeHtml(detalle) + '</div>';
+    function quitar() { if (t.parentNode) t.parentNode.removeChild(t); }
+    t.querySelector(".toast-close").addEventListener("click", function (e) { e.stopPropagation(); quitar(); });
+    t.addEventListener("click", function () { quitar(); openDetail(casoId); });
+    stack.appendChild(t);
+    setTimeout(quitar, 10000);
+  }
+
+  // Aviso del sistema operativo cuando la pestaña no está a la vista (requiere permiso del navegador)
+  function notificarSistema(titulo, detalle) {
+    try {
+      if (!("Notification" in window) || Notification.permission !== "granted" || !document.hidden) return;
+      var icon = document.querySelector('link[rel="icon"]');
+      var n = new Notification(titulo, { body: detalle, icon: icon ? icon.href : undefined });
+      n.onclick = function () { window.focus(); n.close(); };
+    } catch (e) {}
+  }
+
+  function initNotificaciones() {
+    if (!("Notification" in window) || Notification.permission !== "default") return;
+    // Los navegadores solo permiten pedir el permiso después de un clic del usuario
+    document.addEventListener("click", function pedir() {
+      document.removeEventListener("click", pedir);
+      try { Notification.requestPermission(); } catch (e) {}
+    });
   }
 
   // ---------- Carga y tiempo real: proveedores ----------
@@ -455,17 +516,26 @@
   }
 
   // ---------- Render: estadísticas ----------
+  // Top de talleres con más casos abiertos, de mayor a menor (izquierda a derecha)
+  var TOP_TALLERES = 4;
+  var TOP_CLASES = ["abiertos", "proceso", "pendiente", "urgente"];
   function renderStats() {
-    var casosVisibles = state.casos.filter(function (c) { return c.tipo !== "visita"; });
-    var abiertos = casosVisibles.filter(function (c) { return c.estado !== "cerrado"; }).length;
-    var pendientes = casosVisibles.filter(function (c) { return c.estado === "pendiente"; }).length;
-    var proceso = casosVisibles.filter(function (c) { return c.estado === "proceso"; }).length;
-    var urgentes = casosVisibles.filter(function (c) { return c.prioridad === "urgente" && c.estado !== "cerrado"; }).length;
-    document.getElementById("stats").innerHTML =
-      '<div class="stat abiertos"><b class="mono">' + abiertos + '</b><span>Casos abiertos</span></div>' +
-      '<div class="stat pendiente"><b class="mono">' + pendientes + '</b><span>Pendientes de iniciar</span></div>' +
-      '<div class="stat proceso"><b class="mono">' + proceso + '</b><span>En proceso / esperando</span></div>' +
-      '<div class="stat urgente"><b class="mono">' + urgentes + '</b><span>Urgentes abiertos</span></div>';
+    var conteo = {};
+    state.casos.forEach(function (c) {
+      if (c.tipo === "visita" || c.estado === "cerrado") return;
+      var nombre = c.proveedor === "Otros" ? (c.proveedorDetalle || "Otros") : c.proveedor;
+      if (!nombre) return;
+      conteo[nombre] = (conteo[nombre] || 0) + 1;
+    });
+    var top = Object.keys(conteo).map(function (n) { return { nombre: n, total: conteo[n] }; })
+      .sort(function (a, b) { return b.total - a.total || a.nombre.localeCompare(b.nombre); })
+      .slice(0, TOP_TALLERES);
+    var el = document.getElementById("stats");
+    if (!top.length) { el.innerHTML = '<div class="stat"><b class="mono">0</b><span>Sin casos abiertos en talleres</span></div>'; return; }
+    el.innerHTML = top.map(function (t, i) {
+      return '<div class="stat ' + TOP_CLASES[i] + '"><b class="mono">' + t.total + '</b>' +
+        '<span><span class="stat-rank mono">#' + (i + 1) + '</span> <span class="stat-name">' + escapeHtml(t.nombre) + '</span></span></div>';
+    }).join("");
   }
 
   function filteredCasos() {
@@ -1010,12 +1080,12 @@
       : '';
     body.innerHTML =
       '<h2>Proveedores / service oficiales</h2>' +
-      '<p class="sub" id="provSub">' + (myRole === "admin" ? "Tocá un proveedor para ver o editar su ficha." : 'Se usan en el desplegable de "Envío a proveedor" y "Retiro de producto".') + '</p>' +
+      '<p class="sub" id="provSub">' + (myRole === "admin" ? "Tocá un proveedor para ver o editar su ficha." : "Tocá un proveedor para ver sus datos de contacto y horarios.") + '</p>' +
       '<div class="prov-list" id="provList">' + listHtml + '</div>' +
       addRow;
 
     Array.prototype.forEach.call(body.querySelectorAll(".prov-name"), function (btn) {
-      btn.addEventListener("click", function () { if (myRole === "admin") openProvFicha(btn.getAttribute("data-id")); });
+      btn.addEventListener("click", function () { openProvFicha(btn.getAttribute("data-id")); });
     });
     Array.prototype.forEach.call(body.querySelectorAll(".prov-del"), function (btn) {
       btn.addEventListener("click", function (e) { e.stopPropagation(); deleteProveedor(btn.getAttribute("data-id")); });
@@ -1030,12 +1100,16 @@
   function renderProvFicha(body) {
     var p = proveedoresList.filter(function (x) { return x.id === provEditingId; })[0];
     if (!p) { provEditingId = null; renderProvList(body); return; }
+    var esAdmin = myRole === "admin";
+    var mapsUrl = /^https?:\/\//i.test(p.ubicacion || "") ? p.ubicacion : "";
     body.innerHTML =
       '<h2>Ficha de proveedor</h2>' +
-      '<p class="sub">Solo el administrador puede editar estos datos.</p>' +
+      '<p class="sub">' + (esAdmin ? "Solo el administrador puede editar estos datos." : "Datos de consulta. Solo el administrador puede modificarlos.") + '</p>' +
       '<div class="field"><label for="pf_nombre">Nombre de proveedor</label><input id="pf_nombre" value="' + escapeHtml(p.nombre) + '"></div>' +
       '<div class="field"><label for="pf_contacto">Nro contacto</label><input id="pf_contacto" value="' + escapeHtml(p.contacto || "") + '"></div>' +
-      '<div class="field"><label for="pf_ubicacion">Ubicación (enlace de Maps)</label><input id="pf_ubicacion" value="' + escapeHtml(p.ubicacion || "") + '"></div>' +
+      '<div class="field"><label for="pf_ubicacion">Ubicación (enlace de Maps)</label><input id="pf_ubicacion" value="' + escapeHtml(p.ubicacion || "") + '">' +
+        (mapsUrl ? '<a class="prov-link" href="' + escapeHtml(mapsUrl) + '" target="_blank" rel="noopener">Abrir en Maps ↗</a>' : '') +
+      '</div>' +
       '<div class="field"><label for="pf_direccion">Dirección</label><input id="pf_direccion" value="' + escapeHtml(p.direccion || "") + '"></div>' +
       '<div class="field-row">' +
         '<div class="field"><label for="pf_horarioLv">Horario Lunes a Viernes</label><input id="pf_horarioLv" value="' + escapeHtml(p.horario_lv || "") + '"></div>' +
@@ -1045,10 +1119,11 @@
       '<div class="field-error" id="fichaError" style="display:none"></div>' +
       '<div class="modal-actions" style="margin-top:0">' +
         '<button class="btn-secondary" id="fichaVolver" type="button">Volver a la lista</button>' +
-        '<button class="btn-primary" id="fichaGuardar" type="button">Guardar</button>' +
+        (esAdmin ? '<button class="btn-primary" id="fichaGuardar" type="button">Guardar</button>' : '') +
       '</div>';
     document.getElementById("fichaVolver").addEventListener("click", function () { provEditingId = null; renderProvModal(); });
-    document.getElementById("fichaGuardar").addEventListener("click", saveProvFicha);
+    if (esAdmin) document.getElementById("fichaGuardar").addEventListener("click", saveProvFicha);
+    else Array.prototype.forEach.call(body.querySelectorAll("input, textarea"), function (el) { el.readOnly = true; });
   }
 
   function showFichaError(msg) {
